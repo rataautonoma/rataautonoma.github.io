@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title> 
-        <link rel="stylesheet" href="index.css">
-        <style>
-            /* Add this style inside the head tag */
-            .content-wrapper {
-                max-width: 500px; /* Set the maximum width you want for your content */
-                margin: 0 auto; /* Centers the content horizontally */
-                padding: 20px; /* Optional: Adds some padding around the content */
-            }
-        </style>
-    </head>
-    <body>
-        <div class="content-wrapper">
-        <h1>Home</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="marco-teorico.html">Marco Teórico</a> |
-            <a href="marco-referencial.html">Marco Referencial</a>
-            <a href="hallazgos.html">Hallazgos</a>
-            <a href="bocetos-imagenes.html">Bocetos y Anexos</a>
-        </nav>
-        <p> <br><b>¡Bienvenido a mi sitio web creado para la UA de Análisis de la Cultura para la FAV de la UANL! </b><br><br> 
-            Aquí estaré subiendo algunas tareas y asignaciones encargadas por mi docente. <br><br>
-            Estoy haciendo el código de este sitio web manualmente con los aprendizajes de mi UA separada: Lenguajes de Programación. Entonces, el sitio se ira actualizando y viendo mejor entorno al paso del tiempo durante el semestre. <br><br><br> <b>¡Gracias!</b>
-            </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANEMOIA</title>
 
-        <img src="assets/favlogo.jpg" alt="favlogo">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'SNAGA';
+            src: url('fonts/SNAGA.otf');
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="ANEMOIA logo">
+    </div>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Colección</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Viste una historia</h2>
+        <p>No vendemos ropa. Curamos identidad.</p>
+        <button>Explorar colección</button>
+    </div>
+
+    <div class="hero-visual">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <div class="zipper zipper-1"></div>
+</section>
+
+<section class="about">
+    <h2>Curaduría urbana</h2>
+    <p>Piezas seleccionadas con intención. Sin confusión. Sin fast fashion.</p>
+</section>
+
+<section class="gallery">
+    <div class="card">
+        <img src="images/model1.jpg" alt="">
+        <p>Archivo 1998</p>
+    </div>
+
+    <div class="card">
+        <img src="images/model2.jpg" alt="">
+        <p>Rework</p>
+    </div>
+
+    <div class="card">
+        <img src="images/model3.jpg" alt="">
+        <p>Street Archive</p>
+    </div>
+</section>
+
+<section class="statement">
+    <h2>Anti fast fashion</h2>
+    <p>La moda más relevante ya fue creada.</p>
+</section>
+
+<footer>
+    <p>© ANEMOIA</p>
+</footer>
+
+</body>
+</html>
         </div>
     </body>
 
