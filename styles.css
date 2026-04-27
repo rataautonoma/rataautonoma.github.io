@@ -1,0 +1,313 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: #d4d0a5;
+    color: #382412;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #382412;
+}
+
+.logo-container img {
+    height: 40px;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #d4d0a5;
+    font-size: 14px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    padding: 80px 60px;
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 500px;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-family: 'SNAGA', sans-serif;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: #c32f27;
+    color: white;
+    cursor: pointer;
+}
+
+/* CÍRCULOS (llenan el espacio derecho) */
+.circle {
+    position: absolute;
+    border: 3px solid #c32f27;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 260px;
+    height: 260px;
+    top: 40px;
+    right: 60px;
+}
+
+.circle-2 {
+    width: 160px;
+    height: 160px;
+    bottom: 60px;
+    right: 200px;
+}
+
+/* ZIPPER */
+.zipper {
+    position: absolute;
+    border-top: 2px dashed #c32f27;
+    width: 200px;
+}
+
+.zipper-1 {
+    bottom: 40px;
+    left: 60px;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 60px;
+    background: #ffd700;
+}
+
+.about h2 {
+    font-family: 'SNAGA', sans-serif;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    gap: 20px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+/* STATEMENT */
+.statement {
+    padding: 80px;
+    background: #4e6e5d;
+    color: #d4d0a5;
+    text-align: center;
+}
+
+.statement h2 {
+    font-family: 'SNAGA', sans-serif;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #382412;
+    color: #d4d0a5;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 60px 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    /* círculos más pequeños en mobile */
+    .circle-1 {
+        width: 120px;
+        height: 120px;
+        right: 20px;
+    }
+
+    .circle-2 {
+        width: 80px;
+        height: 80px;
+        right: 100px;
+    }
+}
+
+
+
+
+
+/* ========================= */
+/* 🖥️ LARGE SCREENS (1500px+) */
+/* ========================= */
+
+@media (min-width: 1500px) {
+
+    .hero {
+        max-width: 1500px;
+        padding: 120px 80px;
+    }
+
+    /* stronger text presence */
+    .hero-text {
+        max-width: 600px;
+    }
+
+    .hero h2 {
+        font-size: 80px;
+    }
+
+    /* EXISTING CIRCLES (adjusted) */
+    .circle-1 {
+        width: 320px;
+        height: 320px;
+        top: 80px;
+        right: 120px;
+    }
+
+    .circle-2 {
+        width: 200px;
+        height: 200px;
+        bottom: 80px;
+        right: 360px;
+    }
+
+    /* NEW CIRCLE (depth layer) */
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 2px dashed #c32f27;
+        border-radius: 50%;
+        top: 50%;
+        right: 180px;
+        transform: translateY(-50%);
+        opacity: 0.5;
+    }
+
+    /* OPTIONAL IMAGE LAYER (VERY SUBTLE) */
+    .hero::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: url("images/hero-large.jpg") center/cover no-repeat;
+        opacity: 0.08; /* VERY subtle */
+        pointer-events: none;
+    }
+
+    /* zipper scales */
+    .zipper-1 {
+        width: 300px;
+        bottom: 80px;
+        left: 100px;
+    }
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* important */
+}
+
+.card img {
+    width: 100%;
+    height: 400px; /* 🔥 forces consistency */
+    object-fit: cover; /* 🔥 crops nicely */
+    display: block;
+}
+
+.card {
+    background: white;
+    padding: 12px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
+    border: 4px dashed #c32f27;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
